@@ -1,0 +1,189 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Your existing head content here -->
+    <style>
+    body{
+        font-family: Arial, sans-serif;
+    }
+        section{
+    padding: 5rem 9%;
+    }
+    .packages .box-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+header {
+            background: linear-gradient(to right, #4CAF50, #2196F3);
+            color: #fff;
+            text-align: center;
+            padding: 1em;
+            position: relative;
+        }
+
+.packages .box-container .box{
+    width: 30%;
+    height: 28rem;
+    border-radius: .5rem;
+    overflow: hidden;
+    box-shadow: 0 1rem 2rem rgba(0,0,0,.1);
+}
+
+.packages .box-container .box img{
+    height: 15rem;
+    width: 100%;
+    object-fit: cover;
+
+}
+
+.packages .box-container .box .content{
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+
+}
+
+.packages .box-container .box .content .read-more-btn{
+    color: #0984e3;
+}
+
+.packages .box-container .box .content .read-more-text{
+    display: none;
+}
+
+.packages .box-container .box .content .read-more-text--show{
+    display: inline;
+}
+
+.packages .box-container .box .content h3{
+    font-size: 1.5rem;
+    color: #333;
+
+}
+
+.packages .box-container .box .content h3 i{
+    color: var(--orange);
+
+}
+
+.packages .box-container .box .content p{
+    font-size: 1rem;
+    color: #666;
+    padding: 0rem 0;
+}
+
+/* .packages .box-container .box .content .stars i{
+    font-size: 1.7rem;
+    color: var(--orange);
+} */
+
+.packages .box-container .box .content .price{
+    font-size: 2rem;
+    color: #333;
+    padding-top: 1rem;
+}
+
+.packages .box-container .box .content .price span{
+    color: #666;
+    font-size: 1.5rem;
+    text-decoration: line-through;
+}
+
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Insurance</h1>
+    </header>
+
+    <main>
+        <section class="packages" id="packages">
+        <div class="box-container">
+
+            <!-- Life Insurance -->
+            <div class="box">
+                <img src="{%static 'life.jpg'%}" alt="">
+                <div class="content">
+                    <h3><i class="fas fa-map-marker-alt"></i>Life Insurance</h3>
+                    <p>With our affordable and flexible term plan, ensure your family is financially secured at different stages of life.
+                    </p>
+
+                    <div>
+                        <a href="https://www.tataaia.com/" class="butt">Learn More</a>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Auto Insurance -->
+            <div class="box">
+                <img src="{%static 'auto.webp'%}" alt="">
+                <div class="content">
+                    <h3><i class="fas fa-map-marker-alt"></i>Auto Insurance</h3>
+                    <p>Covers damage to the insured's vehicle and liability for bodily injury or property damage to others.</p>
+
+                    <div>
+                        <a href="https://www.investopedia.com/terms/a/auto-insurance.asp" class="butt">Learn More</a>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Health Insurance -->
+            <div class="box">
+                <img src="{%static 'health.webp'%}" alt="">
+                <div class="content">
+                    <h3><i class="fas fa-map-marker-alt"></i>Health Insurance</h3>
+                    <p>Covers medical expenses and ensures financial protection in case of illness or injury.
+                </p>
+
+                    <div>
+
+                        <a href="https://www.bajajfinserv.in/insurance/health-insurance-all-products" class="butt">Learn More</a>
+
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Travel Insurance -->
+            <div class="box">
+                <img src="{%static 'travel.jpg'%}" alt="">
+                <div class="content">
+                    <h3><i class="fas fa-map-marker-alt"></i>Travel Insurance </h3>
+                    <p>It covers medical expenses, lost luggage, flight cancellations, and other losses that a traveller can incur while travelling.</p>
+
+                    <div>
+
+                        <a href="https://www.tataaig.com/travel-insurance" class="butt">Learn More</a>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- General Insurance -->
+            <div class="box">
+                <img src="{%static 'general.png'%}" alt="">
+                <div class="content">
+                    <h3><i class="fas fa-map-marker-alt"></i>General Insurance</h3>
+                    <p>It includes fire insurance, motor insurance, burglary & house breaking insurance, pay individual insurance, marine insurance, etc</p>
+                <div>
+
+                        <a href="https://www.bajajallianz.com/general-insurance.html" class="butt">Learn More</a>
+
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+    </section>
+
+</main>
+</body>
+</html>

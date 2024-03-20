@@ -1,0 +1,281 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Add this to the head section of your HTML -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+  <title>Net Banking - About Us</title>
+  <style>
+    body {
+      font-family: 'Nunito', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+    }
+
+    img {
+      max-width: 100%;
+      height: 90%;
+      width: 100%; /* Adjust the width as needed */
+      max-height: 400px; /* Adjust the max-height as needed */
+      object-fit: cover; /* Maintain image aspect ratio and cover the container */
+      display: block;
+      margin: 0 auto; /* Center the image */
+    }
+
+    header {
+      background-color: #090b52;
+      color: #fff;
+      text-align: center;
+      padding: 1em;
+      position: relative;
+      width: 100%;
+      z-index: 1000;
+      transition: background-color 0.5s ease;
+    }
+
+    header.scrolled {
+      background-color: #555;
+    }
+
+    section {
+      position: relative;
+      height: 300px;
+      margin-left: 30px;
+      margin-right: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      background-color: #fcfcfc;
+      text-align: center;
+      transition: transform 0.5s ease, opacity 0.5s ease;
+      opacity: 0;
+      transform: translateY(20px);
+    }
+
+    section.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    h2 {
+      color: #fff;
+      margin-bottom: 20px;
+      font-size: 2em;
+    }
+
+    p {
+      line-height: 1.6;
+      color: #ddd;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    #about {
+      margin-top: 20px;
+      font-weight: bold;
+    }
+
+    footer {
+      background-color: #090b52;
+      color: #fff;
+      text-align: center;
+      padding: 1em 0;
+    }
+
+    footer p {
+      margin: 0;
+    }
+
+    section:hover {
+      transform: scale(1.02);
+    }
+
+    section:hover h2 {
+      color: #0cbbf0;
+    }
+
+    section:hover p {
+      color: #7d7878;
+    }
+
+    @media only screen and (max-width: 600px) {
+      section {
+        height: 300px;
+      }
+    }
+#symptoms .review-slider{
+    padding-bottom: 2rem;
+    /* display: inline-block; */
+
+}
+
+#symptoms .box{
+    width: 300px;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 1rem 1rem rgba(0,0,0,.1);
+    border-radius: .5rem;
+    /* display: inline; */
+}
+
+#symptoms .box img{
+    height: 14rem;
+    width: 14rem;
+    border-radius: 0%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+
+}
+
+#symptoms .box h2{
+    color: #333;
+    font-size: 1.3rem;
+}
+
+#symptoms .box p{
+    color: #666;
+    font-size: 1.5rem;
+    padding: 1rem 0;
+}
+
+#symptoms .box .stars i{
+    color: var(--orange);
+    font-size: 1.7rem;
+
+}
+
+  </style>
+</head>
+
+<body>
+  <img src="{%static 'about.png'%}" alt="">
+  <section id="about" class="show">
+    <div>
+      <h2>About Us</h2>
+      <p>Welcome to Your Bank, where your financial needs meet cutting-edge technology. We're dedicated to staying ahead
+        of cyber threats, implementing cutting-edge authentication protocols for precise transaction authorization. Your
+        trust is our priority—we uphold the highest standards of integrity and confidentiality. With a commitment to
+        innovation and adaptability, we offer a secure environment for your financial well-being. Explore our services
+        with confidence, knowing we are your trusted partner in financial success.</p>
+    </div>
+  </section>
+
+  <section id="vision" style="background-image: url('vision.jpg');" class="show">
+    <div>
+      <h2>Vision</h2>
+      <p>At Your Bank, our core vision is to revolutionize the digital banking landscape by providing a net banking platform
+        that seamlessly integrates convenience with robust security measures. We are driven by a commitment to empower
+        our users, enabling them to manage their finances effortlessly while upholding the highest standards of
+        security.</p>
+    </div>
+  </section>
+
+  <section id="mission" class="show">
+    <div>
+      <h2>Mission</h2>
+      <p>Our mission is to lead the way in transforming the digital banking experience. We are dedicated to providing a
+        seamless and secure net banking platform, leveraging cutting-edge technology to empower our users. With an
+        unwavering commitment to the highest standards of security, we continuously innovate to stay ahead of evolving
+        cyber threats. </p>
+    </div>
+  </section>
+  <br>
+  <br>
+  <br>
+  <br>
+
+
+    <!-- symptoms-->
+    <div class="swiper-container symptom-slider" id="symptoms">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <div class="box">
+                    <img src="{%static 'bod.jpeg'%}" alt="">
+                    <h2>Board of Director</h2>
+
+                </div>
+            </div>
+
+            <div class="swiper-slide">
+                <div class="box">
+                  <img src="{%static 'bom.webp'%}" alt="">
+                    <h2>Board of Management</h2>
+
+                </div>
+            </div>
+
+            <div class="swiper-slide">
+                <div class="box">
+                  <img src="{%static 'chairman.jpg'%}" alt="">
+                    <h2>Chairmans note</h2>
+
+                </div>
+            </div>
+
+            <div class="swiper-slide">
+                <div class="box">
+                  <img src="{%static 'gallery.jpg'%}" alt="">
+                    <h2>Gallery</h2>
+
+                </div>
+            </div>
+
+            <div class="swiper-slide">
+                <div class="box">
+                  <img src="{%static 'feedback.jpg'%}" alt="">
+                    <h2>Customer Feedback</h2>
+
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+
+
+
+</body>
+<script>
+
+  var swiper = new Swiper('.symptom-slider', {
+      effect: 'coverflow',
+      grabCursor: true,
+      centeredSlides: true,
+      loop: true,
+      coverflowEffect: {
+          rotate: 50,
+          stretch: 0,
+          depth: 100,
+          modifier: 1,
+          slideShadows: true,
+      },
+      autoplay: {
+          delay: 5000,
+          disableOnInteraction: false,
+          reverseDirection: true,
+        },
+
+      breakpoints: {
+          320: {
+              slidesPerView: 1,
+          },
+          480: {
+              slidesPerView: 2,
+          },
+          640: {
+              slidesPerView: 3,
+          },
+      },
+  });
+
+  </script>
+
+</html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CLCSS Webpage</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background: linear-gradient(to right, #4CAF50, #2196F3);
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+            margin: 20px;
+        }
+
+        .circle-button {
+            background-color: #4d4c4c;
+            color: white;
+            border: none;
+            border-radius: 100%;
+            padding: 20px 30px;
+            font-size: 16px;
+            cursor: pointer;
+            margin: 10px;
+            outline: none;
+            transition: background-color 0.3s;
+        }
+
+        .circle-button:hover {
+            background-color: #333;
+        }
+
+        .content {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+        .content h2{
+           color: #333;
+        }
+        .content p{
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Credit Linked Capital Subsidy Scheme for Technology Upgradation</h1>
+    </header>
+
+    <div class="container">
+        <button class="circle-button" onclick="showDescription()">Description</button>
+        <button class="circle-button" onclick="showAssistance()">Nature of Assistance</button>
+        <button class="circle-button" onclick="showBeneficiaries()">Who can be Benefitted</button>
+        <button class="circle-button" onclick="showApplication()">How to Apply</button>
+        <button class="circle-button" onclick="showStatus()">Status of Scheme</button>
+    </div>
+
+    <div class="content" id="descriptionContent">
+        <h2>Description</h2>
+        <p>The objective of the Scheme is to facilitate technology up-gradation in MSEs by providing an upfront capital subsidy of 15 per cent (on institutional finance of up to Rs 1 crore availed by them) for induction of well-established and improved technology in the specified 51 sub-sectors/products approved. In other words, the major objective is to upgrade their plant & machinery with state-of-the-art technology, with or without expansion and also for new MSEs which have set up their facilities with appropriate eligible and proven technology duly approved under scheme guidelines. List of Technologies is available at www.dcmsme.gov.in The Scheme is a demand-driven one without any upper limit on overall annual spending on the subsidy disbursal.</p>
+        <!-- Add the rest of the description content here -->
+    </div>
+
+    <div class="content" id="assistanceContent" style="display: none;">
+        <h2>Nature of Assistance</h2>
+        <p>The revised scheme aims at facilitating technology up-gradation by providing 15% upfront capital subsidy to MSEs, including tiny, khadi, village and coir industrial units, on institutional finance availed by them for induction of well-established and improved technologies in specified sub-sectors/products approved under the scheme.</p>
+    </div>
+
+    <div class="content" id="whocanbenefitedContent" style="display: none;">
+        <h3>Who can be benefitted?</h3>
+        <p>Micro and Small Enterprises (MSEs) having a valid UAM number.</p>
+    </div>
+
+    <div class="content" id="howtoapplyContent" style="display: none;">
+        <h4>How to Apply?</h4>
+        <p>Online Application and Tracking System has been introduced w.e.f. 01.10.2013. To claim subsidy under CLCSS, eligible MSEs are required to apply online through Primary Lending Institutions (PLIs), from where the MSEs avail term loan. The completed application is being uploaded by the PLI through Online Application and Tracking System to the attached Nodal Agency which, in turn, recommends the application online to the Office of DC (MSME) for the release of subsidy. After processing of the application and subject to the availability of funds, due approval is accorded from the Competent Authority with the concurrence of the Internal Finance Wing, after which funds are released to Nodal Agencies. Funds are then transferred by the Nodal Agencies to the PLIs where the account of the MSE is operated.</p>
+    </div>
+
+    <div class="content" id="statusContent" style="display: none;">
+        <h4>Status of Scheme</h4>
+        <p>The CLCSS component of CLCS-TU scheme was in force till 31/03/2020.</p>
+    </div>
+
+    <script>
+        function showDescription() {
+            document.getElementById('descriptionContent').style.display = 'block';
+            document.getElementById('assistanceContent').style.display = 'none';
+            document.getElementById('whocanbenefitedContent').style.display = 'none';
+            document.getElementById('howtoapplyContent').style.display = 'none';
+            document.getElementById('statusContent').style.display = 'none';
+        }
+
+        function showAssistance() {
+            document.getElementById('descriptionContent').style.display = 'none';
+            document.getElementById('assistanceContent').style.display = 'block';
+            document.getElementById('whocanbenefitedContent').style.display = 'none';
+            document.getElementById('howtoapplyContent').style.display = 'none';
+            document.getElementById('statusContent').style.display = 'none';
+        }
+
+        function showBeneficiaries() {
+            document.getElementById('descriptionContent').style.display = 'none';
+            document.getElementById('assistanceContent').style.display = 'none';
+            document.getElementById('whocanbenefitedContent').style.display = 'block';
+            document.getElementById('howtoapplyContent').style.display = 'none';
+            document.getElementById('statusContent').style.display = 'none';
+        }
+
+        function showApplication() {
+            document.getElementById('descriptionContent').style.display = 'none';
+            document.getElementById('assistanceContent').style.display = 'none';
+            document.getElementById('whocanbenefitedContent').style.display = 'none';
+            document.getElementById('howtoapplyContent').style.display = 'block';
+            document.getElementById('statusContent').style.display = 'none';
+        }
+
+        function showStatus() {
+            document.getElementById('descriptionContent').style.display = 'none';
+            document.getElementById('assistanceContent').style.display = 'none';
+            document.getElementById('whocanbenefitedContent').style.display = 'none';
+            document.getElementById('howtoapplyContent').style.display = 'none';
+            document.getElementById('statusContent').style.display = 'block';
+        }
+    </script>
+</body>
+</html>

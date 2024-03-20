@@ -1,0 +1,173 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Loan Page</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+
+    header {
+      background: linear-gradient(to right, #4CAF50, #2196F3);
+      color: #fff;
+      padding: 0.6em;
+      text-align: center;
+    }
+
+    .moving-sentence-container {
+            white-space: nowrap;
+            overflow: hidden;
+        }
+
+        .moving-sentence {
+            display: inline-block;
+            animation: moveLeftToRight 15s linear infinite; /* Adjust the duration as needed */
+            color: #ffda05;
+        }
+
+        @keyframes moveLeftToRight {
+            0% {
+                transform: translateX(100%);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+
+    .loan-cards {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      padding: 2em;
+    }
+
+    .loan-card {
+      width: 300px;
+      background-color: #fff;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+      margin: 1em;
+      padding: 1em;
+      border-radius: 8px;
+      overflow: hidden;
+      transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    }
+
+    .loan-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    h2 {
+      color: #333;
+    }
+
+    p {
+      font-size: 0.9em;
+      margin-bottom: 1em;
+      color: #666;
+    }
+
+    button {
+      background-color: #ff8800;
+      color: #fff;
+      border: none;
+      padding: 0.6em 1em;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s ease-in-out;
+    }
+
+    button:hover {
+      background-color: #cc6600;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    .loan-card img {
+      width: 100%;
+      height: 200px;
+      border-radius: 4px;
+      animation: fadeIn 0.8s ease-out;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Loans</h1>
+    <div class="moving-sentence-container">
+        <div class="moving-sentence">Many needs.....one quick loan</div>
+    </div>
+  </header>
+
+  <div class="loan-cards">
+    <div class="loan-card">
+      <img src="{%static 'personal.jpg'%}" alt="">
+      <h2>Personal Loan</h2>
+      <p>Avail a personal loan to meet your ceremonial or medical expenses, carry out house renovations, repay your debts or for any other reason acceptable to the Bank.</p>
+      <a href="https://www.bankbazaar.com/personal-loan.html">Learn More</a>
+    </div>
+
+    <div class="loan-card">
+      <img src="{%static 'housing.webp'%}" alt="">
+      <h2>Housing Loan</h2>
+      <p>Purchase a flat, row house, bungalow etc which is available either as ready possession or under construction*</p>
+      <a href="https://www.bankbazaar.com/home-loan.html">Learn More</a>
+    </div>
+
+    <div class="loan-card">
+      <img src="{%static 'education.webp'%}" alt="">
+      <h2>Educational Loan</h2>
+      <p>Invest in your education with our easy-to-access educational loans, designed for students.</p>
+      <a href="https://www.bankbazaar.com/education-loan.html">Learn More</a>
+    </div>
+
+    <div class="loan-card">
+      <img src="{%static 'gold.webp'%}" alt="">
+      <h2>Gold Loan</h2>
+      <p>Avail Gold loan at a truly unparalleled rate of interest to overcome financial exigencies.</p>
+      <a href="https://www.bankbazaar.com/gold-loan.html">Learn More</a>
+    </div>
+
+    <div class="loan-card">
+      <img src="{%static 'women.png'%}" alt="">
+      <h2>Women Entrepreneur Loan</h2>
+      <p>For granting loans to the members of “Women Self Help Groups” (SHG) so as to cater needs of weaker section in the society.</p>
+      <a href="https://www.go-yubi.com/blog/government-business-loans-for-women-startup-in-india/">Learn More</a>
+    </div>
+
+    <div class="loan-card">
+      <img src="{%static 'travel.jpg'%}" alt="">
+      <h2>Travel Loan</h2>
+      <p>For meeting travel expenses for business or leisure in India or abroad.</p>
+      <a href="https://www.bankbazaar.com/personal-loan/travel-loan.html">Learn More</a>
+    </div>
+
+    <!-- Add more loan cards as needed -->
+
+  </div>
+
+  <!-- <script>
+    function applyLoan(loanType) {
+      // Add logic here to handle loan application, e.g., redirect to a form page
+      console.log(Applying for ${loanType});
+      // You can redirect to a loan application form or perform other actions.
+    }
+  </script> -->
+
+</body>
+</html>

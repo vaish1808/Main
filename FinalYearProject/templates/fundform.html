@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATM OTP Generation</title>
+</head>
+<body>
+    <h1>ATM OTP Generation</h1>
+    <form id="otpForm" method="post" action="{% url 'my_view' %}">
+        {% csrf_token %}
+        <label for="pin">Enter ATM Pin (4 digits):</label><br>
+        <input type="password" id="pin" name="pin" minlength="4" maxlength="4" required><br>
+        <button type="submit">Generate OTP</button>
+    </form>
+    <br>
+    <h2>Upload QR Code</h2>
+    <form id="qrUploadForm" method="post" action="{% url 'my_view' %}" enctype="multipart/form-data">
+        {% csrf_token %}
+        <input type="file" id="qrFile" name="qrFile" accept="image/*" required><br>
+        <button type="submit">Upload QR Code</button>
+    </form>
+
+    {% if decryptedOTP %}
+        <h2>Decrypted OTP</h2>
+        <input type="text" id="decryptedOTP" value="{{ decryptedOTP }}" readonly>
+    {% endif %}
+    {% if error_message %}
+        <p>{{ error_message }}</p>
+    {% endif %}
+</body>
+
+</html>

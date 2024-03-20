@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DEMAT Account</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f8f8f8;
+            background-size: cover
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            color: #333;
+        }
+
+        header {
+            background: linear-gradient(to right, #4CAF50, #2196F3);
+            color: #fff;
+            text-align: center;
+            padding: 1em;
+            font-size: 18px;
+        }
+
+        .buttons-container {
+            display: flex;
+            gap: 10px;
+            justify-content: flex-start;
+            margin: 20px 10px;
+        }
+
+        button {
+            background-color: #4d4c4c;
+            color: #fff;
+            padding: 12px;
+            border: none;
+            cursor: pointer;
+            border-radius: 4px;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #333;
+        }
+
+        /* Additional styles for account information */
+        .account-info {
+            display: none;
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .account-info.active {
+            display: block;
+        }
+
+        .account-info:hover {
+            transform: scale(1.02);
+        }
+
+        .highlight {
+            color: #333;
+            font-weight: bold;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        /* Form styles */
+        form {
+            display: none;
+            max-width: 400px;
+            margin: 20px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        form:hover {
+            transform: scale(1.02);
+        }
+
+        form.active {
+            display: block;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #333;
+            font-size: 16px;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        button[type="submit"] {
+            background-color: #007bff;
+            color: #fff;
+            padding: 12px;
+            border: none;
+            cursor: pointer;
+            border-radius: 4px;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+        li{
+            color: #666;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>DEMAT Account Services</h1>
+    </header>
+
+    <!-- Buttons to reveal the information and form -->
+    <div class="buttons-container">
+        <button onclick="showInformation('accountFeatures')">Account Features</button>
+        <button onclick="showInformation('openingAccount')">Opening a DEMAT Account</button>
+        <button onclick="showInformation('chargesAssociated')">Charges Associated</button>
+        <button onclick="showForm()">Open DEMAT Account</button>
+    </div>
+
+    <!-- Additional section for account information initially visible -->
+    <section id="accountFeatures" class="account-info active">
+        <h2>Account Features</h2>
+        <ul>
+            <li>Secure storage of financial securities in electronic form.</li>
+            <li>Convenient online access to view holdings and transactions.</li>
+            <li>Quick transfer of shares between Demat accounts.</li>
+            <li>Faster settlement of trades compared to physical delivery.</li>
+        </ul>
+    </section>
+
+    <section id="openingAccount" class="account-info">
+        <h2>Opening a DEMAT Account</h2>
+        <p>To open a DEMAT account, follow these steps:</p>
+        <ol>
+            <li>Visit our nearest branch or website.</li>
+            <li>Submit KYC documents including identity proof, address proof, and PAN card.</li>
+            <li>Complete the account opening form provided by our Depository Participant (DP).</li>
+        </ol>
+    </section>
+
+    <section id="chargesAssociated" class="account-info">
+        <h2>Charges Associated</h2>
+        <ul>
+            <li><span class="highlight">Account Opening Charges:</span> Many DPs charge a one-time fee for opening a Demat account.</li>
+            <li><span class="highlight">Annual Maintenance Charges (AMC):</span> DPs may charge an annual fee to maintain the Demat account.</li>
+            <li><span class="highlight">Transaction Charges:</span> Charges are applied for buying and selling securities.</li>
+        </ul>
+    </section>
+
+    <!-- Form initially hidden, will be revealed on button click -->
+    <form id="dematForm" class="hidden">
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" required>
+
+        <button type="submit">Open DEMAT Account</button>
+    </form>
+
+    <script>
+        function showInformation(infoType) {
+            // Hide all information sections
+            document.querySelectorAll('.account-info').forEach(function (section) {
+                section.classList.remove('active');
+            });
+
+            // Hide the form
+            document.getElementById('dematForm').classList.remove('active');
+
+            // Show the selected information section
+            document.getElementById(infoType).classList.add('active');
+        }
+
+        function showForm() {
+            // Hide all information sections
+            document.querySelectorAll('.account-info').forEach(function (section) {
+                section.classList.remove('active');
+            });
+
+            // Hide the form
+            document.getElementById('dematForm').classList.add('active');
+        }
+    </script>
+
+</body>
+
+</html>

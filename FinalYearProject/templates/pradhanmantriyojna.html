@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pradhan Mantri Jan-Dhan Yojana</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-size: cover;
+            background-position: right;
+            background-repeat: no-repeat;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(to right, #4CAF50, #2196F3);
+            color: #fff;
+            text-align: center;
+            padding: 1em;
+            position: relative;
+        }
+
+        .moving-sentence-container {
+            white-space: nowrap;
+            overflow: hidden;
+        }
+
+        .moving-sentence {
+            display: inline-block;
+            animation: moveLeftToRight 15s linear infinite; /* Adjust the duration as needed */
+            color: #ffda05;
+        }
+
+        @keyframes moveLeftToRight {
+            0% {
+                transform: translateX(100%);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+
+        main {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        h1 {
+            color: #fff;
+            font-size: 28px;
+            margin-bottom: 15px;
+        }
+
+        h2 {
+            color: #fff;
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            color: #666;
+            margin-bottom: 15px;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        .info-section {
+            display: none;
+        }
+
+        .active {
+            display: block;
+        }
+
+        button {
+            background-color: #4d4c4c ;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            margin: 0 10px 10px 0;
+            font-size: 16px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #3b3939;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Pradhan Mantri Jan-Dhan Yojana</h1>
+        <div class="moving-sentence-container">
+            <div class="moving-sentence">Financial inclusion for a brighter future.</div>
+        </div>
+    </header>
+    <main>
+        <button onclick="showInfo('about')">
+            About PMJDY</button>
+        <button onclick="showInfo('features')">Features</button>
+        <button onclick="showInfo('documents')">Documents Required</button>
+        <button onclick="showInfo('mitc')">MITC</button>
+        <button onclick="showInfo('assistance')">Need Assistance?</button>
+
+        <section class="info-section" id="about">
+            <h2>About PMJDY</h2>
+            <p>Pradhan Mantri Jan-Dhan Yojana (PMJDY) is a national mission for financial inclusion to ensure access to financial services, namely, banking/ savings and deposit accounts, remittance, credit, insurance, pension in an affordable manner. Account can be opened in any bank branch or business correspondent (Bank Mitr) outlet. PMJDY accounts are being opened with zero balance.</p>
+        </section>
+
+        <section class="info-section" id="features">
+            <h2>Features</h2>
+            <ul>
+                <li>BSBD account holder should not be maintaining any other savings bank account with any bank/branch to ensure compliance with RBI directives.</li>
+                <li>Accidental insurance cover of Rs. 1 Lakh under Rupay Scheme and for accounts opened after 28/08/2018 accidental Insurance Cover is of Rs. 2 lakhs.</li>
+                <li>The scheme provides a life cover of Rs. 30,000 payable on the death of the beneficiary, subject to fulfillment of the eligibility condition i.e. accounts opened between 15/08/2014 - 31/01/2015.</li>
+                <li>Easy transfer of money across India.</li>
+                <li>Beneficiaries of Government schemes will get direct benefit transfer in these accounts.</li>
+                <li>After satisfactory operation of the account for 6 months, an overdraft facility will be permitted.</li>
+                <li>Access to pension, insurance products.</li>
+                <li>The claim under personal accidental insurance under PMJDY shall be payable if the Rupay cardholder has performed a minimum of one successful financial or non-financial transaction at any of the bank's channels both Intra and Inter - bank i.e. on-us (ATM/ Micro-ATM/ POS/ Business Correspondent of the bank at locations by any payment instrument) within 90 days prior to the date of the accident, including the accident date of RuPay PMJDY Cardholders or off us (same bank channels - Bank Customer /RuPay cardholder transactions at other bank channels).</li>
+                <li>Overdraft facility up to Rs. 10,000 is available in only one account per household, preferably the lady of the household subject to eligibility and overdraft for Rs. 2000 is hassle-free.</li>
+            </ul>
+        </section>
+
+        <section class="info-section" id="documents">
+            <h2>Documents Required</h2>
+            <p>Documents required to open an account under Pradhan Mantri Jan-Dhan Yojana:</p>
+            <ul>
+                <li>If Aadhaar Card/Aadhaar Number is available, then no other documents are required...</li>
+                <li>If the address has changed, then a self-certification of the current address is sufficient.</li>
+                <li>If Aadhaar Card is not available, then any one of the following officially valid documents (OVD) is required: Voter ID card, driving license, PAN card, passport & NREGA Card.</li>
+                <li>If these documents also contain your address, they can serve both as proof of identity and address.</li>
+                <li>If a person does not have any of the 'officially valid documents' mentioned above, but it is categorized as low risk by the banks, then he/she can open a bank account by submitting any one of the following documents:</li>
+                <ul>
+                    <li>Identity Card with the applicant's photograph issued by Central/State Government Departments, Statutory/Regulatory Authorities, Public Sector Undertakings, Scheduled Commercial Banks, and Public Financial Institutions;</li>
+                    <li>Letter issued by a gazette officer, with a duly attested photograph of the person.</li>
+                </ul>
+            </ul>
+        </section>
+
+        <section class="info-section" id="mitc">
+            <h2>MITC (Most Important Terms and Conditions)</h2>
+            <ul>
+                <li>BSBD account, which is operated satisfactorily for at least six months.</li>
+                <li>OD to be granted to the earning individual of the family subject to only one member from a family can be granted limit.</li>
+                <li>There should be regular credits under DBT/DBTL scheme/other verified sources.</li>
+                <li>BSBD account holder should not be maintaining any other savings bank account with any bank/branch to ensure compliance with RBI directives.</li>
+                <li>Age of the applicant between 18 years to 65 years.</li>
+                <li>Minor i.e. customer below the age of 18 years is not eligible for OD under PMJDY.</li>
+                <li>KCC/GCC borrower is not eligible for PMJDY OD.</li>
+                <li>Minimum OD amount Rs. 2,000/- without any assessment subject to fulfilling the above eligibility criteria For an amount beyond Rs. 2000/-, eligible amount for overdraft is 4 times the average balance of the preceding six months or 50% of credit summation in the preceding six months or Rs. 10,000 whichever is lower.</li>
+            </ul>
+        </section>
+
+        <section class="info-section" id="assistance">
+            <h2>Need Assistance?</h2>
+            <p>Here you can check the process for Pradhan Mantri Jandhan Yojana.</p>
+            <p>YouTube link: <a href="https://youtu.be/8L7M3c1DSZs?si=eBetxTZu_2i5csUY" target="_blank">https://youtu.be/8L7M3c1DSZs?si=eBetxTZu_2i5csUY</a></p>
+        </section>
+    </main>
+
+    <script>
+        function showInfo(sectionId) {
+            // Hide all sections
+            var sections = document.querySelectorAll('.info-section');
+            sections.forEach(function (section) {
+                section.classList.remove('active');
+            });
+
+            // Show the selected section
+            var selectedSection = document.getElementById(sectionId);
+            if (selectedSection) {
+                selectedSection.classList.add('active');
+            }
+        }
+    </script>
+</body>
+</html>

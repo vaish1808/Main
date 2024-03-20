@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Registration</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            width: 50%;
+            max-width: 600px;
+            box-sizing: border-box;
+            margin: auto;
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        h3 {
+            color: #fff;
+            background-color: #333;
+            margin-bottom: 20px;
+            padding: 5px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #555;
+        }
+
+        input, select {
+            width: 100%; /* Adjusted width to full */
+            padding: 12px;
+            margin-bottom: 20px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button.dataset-btn,
+        button.train-btn{
+            background-color: #4caf50;
+            color: #fff;
+            font-weight: bold;
+            padding: 15px;
+            padding-left: 4px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 40%; /* Adjusted width to full */
+            margin-bottom: 20px; /* Increased margin-bottom for spacing */
+            margin-right: 53px;
+            font-size: 16px;
+        }
+        button.register-btn {
+            background-color: #3498db;
+            color: #fff;
+            font-weight: bold;
+            padding: 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 50%; /* Adjusted width to full */
+            margin-bottom: 7px; /* Increased margin-bottom for spacing */
+            font-size: 16px;
+            margin-left: 130px;
+        }
+
+
+        button.register-btn:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+
+<form id="registrationForm" action="http://127.0.0.1:8000/user.html/register.html/subregister" method="POST">
+    {% csrf_token %}
+    <h1>User Registration</h1>
+
+    <!-- Personal Information -->
+    <h3>Personal Information</h3>
+    <label for="firstName">First Name:</label>
+    <input type="text" id="firstName" name="first_name" required>
+
+    <label for="lastName">Last Name:</label>
+    <input type="text" id="lastName" name="last_name" required>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="phone">Phone Number:</label>
+    <input type="tel" id="phone" name="phone" required>
+
+    <label for="dob">Date of Birth:</label>
+    <input type="date" id="dob" name="dob" required>
+
+    <label for="gender">Gender:</label>
+    <select id="gender" name="gender" required>
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+        <option value="others">Others</option>
+    </select>
+
+    <!-- Address Information -->
+    <h3>Address Information</h3>
+    <label for="address">Address:</label>
+    <input type="text" id="address" name="address" required>
+
+    <label for="city">City Name:</label>
+    <input type="text" id="city" name="city" required>
+
+    <label for="state">State:</label>
+    <input type="text" id="state" name="state" required>
+
+    <label for="zipCode">Zip Code:</label>
+    <input type="text" id="zipCode" name="zipCode" required>
+
+    <!-- Bank Account Information -->
+    <h3>Bank Account Information</h3>
+    <label for="accountType">Account Type:</label>
+    <select id="accountType" name="account_type" required>
+        <option value="savings">Savings</option>
+        <option value="current">Current</option>
+        <option value="salary">Salary</option>
+    </select>
+
+    <label for="accountPin">Account PIN:</label>
+    <input type="password" id="accountPin" name="account_pin" required>
+
+    <label for="verifyPin">Verify PIN:</label>
+    <input type="password" id="verifyPin" name="verify_pin" required>
+
+    <!-- Buttons with new styling -->
+    <button type="button" class="dataset-btn" onclick="captureDataset()">Capture Dataset</button>
+    <button type="button" class="train-btn" onclick="trainModel()">Train Model</button>
+    <button type="submit" class="register-btn" onclick="registerAccount()">Register Account</button>
+</form>
+<script>
+    function registerAccount() {
+        // Add your JavaScript logic for form submission here
+        // You can use AJAX to send the form data to the server
+        // Example: Send data using Fetch API
+        // fetch('your_server_endpoint', {
+        //     method: 'POST',
+        //     body: new FormData(document.getElementById('registrationForm')),
+        // })
+        // .then(response => response.json())
+        // .then(data => console.log(data))
+        // .catch(error => console.error('Error:', error));
+        alert('Account registered successfully!');
+    }
+</script>
+<!--<script>-->
+<!--    function registerAccount() {-->
+<!--        // Add your JavaScript logic for form submission here-->
+<!--        // You can use AJAX to send the form data to the server-->
+<!--        // Example: Send data using Fetch API-->
+<!--        // fetch('your_server_endpoint', {-->
+<!--        //     method: 'POST',-->
+<!--        //     body: new FormData(document.getElementById('registrationForm')),-->
+<!--        // })-->
+<!--        // .then(response => response.json())-->
+<!--        // .then(data => console.log(data))-->
+<!--        // .catch(error => console.error('Error:', error));-->
+<!--        alert('Account registered successfully!');-->
+<!--    }-->
+<!--    function captureDataset() {-->
+<!--        // Add your logic to open the webcam and capture images for the dataset-->
+<!--        // Example: Use navigator.mediaDevices.getUserMedia to access the webcam-->
+<!--        navigator.mediaDevices.getUserMedia({ video: true })-->
+<!--            .then((stream) => {-->
+<!--                // Add logic to handle the webcam stream, capture images, and save them-->
+<!--                // Example: Display the webcam stream in a video element-->
+<!--                const video = document.createElement('video');-->
+<!--                video.srcObject = stream;-->
+<!--                document.body.appendChild(video);-->
+<!--                video.play();-->
+
+<!--                // You can capture frames using the video element and save them as images-->
+<!--                // Example: Capture a frame every second-->
+<!--                setInterval(() => {-->
+<!--                    // Add logic to capture frames and save them-->
+<!--                    // Example: Use canvas to capture a frame-->
+<!--                    const canvas = document.createElement('canvas');-->
+<!--                    canvas.width = video.videoWidth;-->
+<!--                    canvas.height = video.videoHeight;-->
+<!--                    const context = canvas.getContext('2d');-->
+<!--                    context.drawImage(video, 0, 0, canvas.width, canvas.height);-->
+
+<!--                    // Save the captured frame as an image or send it to the server-->
+<!--                    // Example: Save the image locally (you may need to handle this on the server)-->
+<!--                    const imageDataURL = canvas.toDataURL('image/png');-->
+<!--                    console.log('Captured frame:', imageDataURL);-->
+<!--                }, 1000);-->
+<!--            })-->
+<!--            .catch((error) => {-->
+<!--                console.error('Error accessing webcam:', error);-->
+<!--            });-->
+<!--    }-->
+
+<!--    // Function to train the model-->
+<!--    function trainModel() {-->
+<!--        // Add your logic to train the machine learning model-->
+<!--        // Example: You can use a machine learning library or API for training-->
+<!--        // Example: Send a request to the server to start the training process-->
+<!--        // Note: This is a placeholder, and you need to implement the actual model training logic-->
+<!--        alert('Training the model...');-->
+<!--    }-->
+<!--</script>-->
+
+</body>
+</html>

@@ -1,0 +1,120 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Banking Website</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    .container {
+        background-color: #fff;
+        padding: 30px;
+        border-radius: 8px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        width: 60%;
+        max-width: 450px;
+        box-sizing: border-box;
+        text-align: center;
+    }
+
+    h1 {
+        color: #333;
+        margin-bottom: 20px;
+    }
+
+    .options {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        margin-top: 30px;
+    }
+
+    .option {
+        background-color: #333;
+        color: #fff;
+        padding: 16px 40px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+        transition: all 0.3s ease;
+    }
+
+    .option:hover {
+        background-color: #484646;
+    }
+
+    .or {
+        color: #b4afaf;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+    img {
+        max-width: 50%;
+        height: 50%;
+        border-radius: 8px 8px 0 0;
+        margin-bottom: 20px;
+    }
+</style>
+</head>
+<body>
+<div class="container">
+    <img src="{%static 'login.png'%}" alt="">
+    <!-- <h1>Welcome to Our Banking Website</h1> -->
+    <div class="options">
+        <button class="option" onclick="location.href='login.html'">Login</button>
+        <span class="or">Or</span>
+        <button class="option" onclick="location.href='register.html'">Register</button>
+    </div>
+</div>
+
+<!--<script>-->
+<!--    function openWebcam() {-->
+<!--        // Add your logic to open the webcam and capture images for the dataset-->
+<!--        // Example: Use navigator.mediaDevices.getUserMedia to access the webcam-->
+<!--        navigator.mediaDevices.getUserMedia({ video: true })-->
+<!--            .then((stream) => {-->
+<!--                // Add logic to handle the webcam stream, capture images, and save them-->
+<!--                // Example: Display the webcam stream in a video element-->
+<!--                const video = document.createElement('video');-->
+<!--                video.srcObject = stream;-->
+<!--                document.body.appendChild(video);-->
+<!--                video.play();-->
+
+<!--                // You can capture frames using the video element and save them as images-->
+<!--                // Example: Capture a frame every second-->
+<!--                setInterval(() => {-->
+<!--                    // Add logic to capture frames and save them-->
+<!--                    // Example: Use canvas to capture a frame-->
+<!--                    const canvas = document.createElement('canvas');-->
+<!--                    canvas.width = video.videoWidth;-->
+<!--                    canvas.height = video.videoHeight;-->
+<!--                    const context = canvas.getContext('2d');-->
+<!--                    context.drawImage(video, 0, 0, canvas.width, canvas.height);-->
+
+<!--                    // Save the captured frame as an image or send it to the server-->
+<!--                    // Example: Save the image locally (you may need to handle this on the server)-->
+<!--                    const imageDataURL = canvas.toDataURL('image/png');-->
+<!--                    console.log('Captured frame:', imageDataURL);-->
+<!--                }, 1000);-->
+<!--            })-->
+<!--            .catch((error) => {-->
+<!--                console.error('Error accessing webcam:', error);-->
+<!--            });-->
+<!--    }-->
+<!--</script>-->
+</body>
+</html>

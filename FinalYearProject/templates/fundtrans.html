@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fund Transfer</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            width: 50%;
+            max-width: 600px;
+            box-sizing: border-box;
+            margin: auto;
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        h3 {
+            color: #fff;
+            background-color: #333;
+            margin-bottom: 20px;
+            padding: 5px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #555;
+        }
+
+        input, select {
+            width: 70%; /* Adjusted width to full */
+            padding: 12px;
+            margin-bottom: 20px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button.dataset-btn,
+        button.train-btn{
+            background-color: #4caf50;
+            color: #fff;
+            font-weight: bold;
+            padding: 15px;
+            padding-left: 4px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 40%; /* Adjusted width to full */
+            margin-bottom: 20px; /* Increased margin-bottom for spacing */
+            margin-right: 53px;
+            font-size: 16px;
+        }
+        button.transfer-btn {
+            background-color: #4caf50;
+            color: #fff;
+            font-weight: bold;
+            padding: 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 50%; /* Adjusted width to full */
+            margin-bottom: 7px; /* Increased margin-bottom for spacing */
+            font-size: 16px;
+            margin-left: 130px;
+        }
+        #trans {
+        height: 60px; /* Adjusted height to increase the area vertically */
+    }
+
+        button.register-btn:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+
+<form id="registrationForm" action="http://127.0.0.1:8000/submit" method="POST">
+    {% csrf_token %}
+    <h1>Fund Transfer</h1>
+
+    <!-- Personal Information -->
+    <h3>Personal Information</h3>
+    <label for="bankName">Receiver's Bank Name:</label>
+    <input type="text" id="bankName" name="bankName" required>
+
+    <label for="receiverName">Receiver's Name:</label>
+    <input type="text" id="receiverName" name="receiverName" required>
+
+    <label for="accountNo">Receiver's Account Number:</label>
+    <input type="number" id="accountNo" name="accountNo" required>
+
+    <label for="saccountNo">Sender's Account Number:</label>
+    <input type="number" id="saccountNo" name="saccountNo" required>
+
+    <label for="amt">Amount to Transfer (₹):</label>
+    <input type="number" id="amt" name="amt" required>
+
+    <label for="option">Fund Transfer Option:</label>
+    <select id="option" name="option" required>
+        <option value="local">Local Transfer</option>
+        <option value="international">International</option>
+        <option value="domestic">Domestic</option>
+    </select>
+
+    <label for="dot">Date of Transfer:</label>
+    <input type="date" id="dot" name="dot" required>
+
+    <label for="trans">Transfer Description:</label>
+    <input type="text" id="trans" name="trans" required>
+
+    <button type="button" class="transfer-btn" onclick="location.href='fundform.html'">Transfer fund</button>
+</form>
+
+<script>
+    function transferFunds() {
+        // Add your JavaScript logic for form submission here
+        // You can use AJAX to send the form data to the server
+        // Example: Send data using Fetch API
+        // fetch('your_server_endpoint', {
+        //     method: 'POST',
+        //     body: new FormData(document.getElementById('registrationForm')),
+        // })
+        // .then(response => response.json())
+        // .then(data => console.log(data))
+        // .catch(error => console.error('Error:', error));
+        alert('Account registered successfully!');
+    }
+
+</script>
+
+
+</body>
+</html>
